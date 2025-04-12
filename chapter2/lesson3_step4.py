@@ -12,6 +12,8 @@ try:
 
     browser.switch_to.alert.accept()
 
+    time.sleep(1)
+
     x = int(browser.find_element(By.ID, "input_value").text)
     y = math.log(abs(12 * math.sin(x)), math.e)
 

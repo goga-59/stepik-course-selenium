@@ -1,12 +1,17 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
+import math
 
-link = "http://suninjuly.github.io/simple_form_find_task.html"
+link = "http://suninjuly.github.io/find_link_text"
 
 try:
     browser = webdriver.Chrome()
     browser.get(link)
+
+    link_text = str(math.ceil(math.pow(math.pi, math.e)*10000))
+    link = browser.find_element(By.LINK_TEXT, link_text)
+    link.click()
 
     input1 = browser.find_element(By.TAG_NAME, "input")
     input1.send_keys("Ivan")

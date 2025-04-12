@@ -8,16 +8,16 @@ try:
     browser.get(link)
 
     # Заполняем поле First name
-    first_name = browser.find_element(By.XPATH, "//div[@class='first_block']/div[1]/input")
+    first_name = browser.find_element(By.CSS_SELECTOR, "form div.first_block div.form-group input.form-control.first")
     first_name.send_keys("Ivan")
 
     # Заполняем поле Last name
-    last_name = browser.find_element(By.XPATH, "//div[@class='first_block']/div[2]/input")
+    last_name = browser.find_element(By.CSS_SELECTOR, "form div.first_block div.form-group input.form-control.second")
     last_name.send_keys("Ivanov")
 
     # Заполняем поле Email
-    email = browser.find_element(By.XPATH, "//div[@class='first_block']/div[3]/input")
-    email.send_keys("Ivanov@ivan.com")
+    email = browser.find_element(By.CSS_SELECTOR, "form div.first_block div.form-group input.form-control.third")
+    email.send_keys("support@easylauncher.org")
 
     # Отправляем заполненную форму
     button = browser.find_element(By.CSS_SELECTOR, "button.btn.btn-default")
