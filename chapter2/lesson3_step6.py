@@ -5,10 +5,12 @@ import math
 
 try:
     link = "https://suninjuly.github.io/redirect_accept.html"
-    browser = webdriver.Chrome()
+    browser = webdriver.Firefox()
     browser.get(link)
 
     browser.find_element(By.TAG_NAME, "button").click()
+
+    time.sleep(1)
 
     browser.switch_to.window(browser.window_handles[1])
 
