@@ -5,7 +5,7 @@ import math
 
 try:
     link = "https://suninjuly.github.io/redirect_accept.html"
-    browser = webdriver.Firefox()
+    browser = webdriver.Chrome()
     browser.get(link)
 
     browser.find_element(By.TAG_NAME, "button").click()
