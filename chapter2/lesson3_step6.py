@@ -10,6 +10,8 @@ try:
 
     browser.find_element(By.TAG_NAME, "button").click()
 
+    time.sleep(1)
+
     browser.switch_to.window(browser.window_handles[1])
 
     x = int(browser.find_element(By.ID, "input_value").text)
